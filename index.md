@@ -9,9 +9,47 @@ for socially-aware applications.
 
 # Concepts
 
-A virtual village is similar to a social network. Your app can define a fixed village for all its users, or your app allow your users to create their own private villages. For example, an app can create a fixed village for all its users such as a "San Diego Musicians" application. An app can allow its users to create their own villages and invite only their friends to it, such as say an app that is for just your neighborhood or apartment building.  
- 
+A virtual village is similar to a social network. Your app can define a fixed village for all its users, or your app allow your users to create their own private villages. For example, an app can create a fixed village for all its users such as a "San Diego Musicians" application. An app could also allow its users to create their own private villages and invite only their friends to it, such as say an app that is for sharing information with just your neighborhood or apartment building.  
 
+# Main Features
+- villages
+  - create fixed village(s) for all app users
+  - ability for users to create their own villages
+
+- Village invitations
+  - users create and manage invitations to their villages
+    - email
+    - manually add / remove users
+  - email sending of village invitations for new users
+  - invitation response handling and management
+
+- users
+  - user management for your app
+  - user profiles (photo/avatar, name, contact info, etc.)
+  - user-selectable profile sharing options
+
+- Village Directory
+  - list all villagers and their profiles
+  - options for shared profile in
+
+- Villager Communications    
+  - one-to-one villager messaging
+  - broadcast messages for all villagers
+  - message boards w/ threaded discussion
+    - fixed topics
+    - user-defined topics
+
+Village memberships
+  - Village-level permissions roles (admin, user, etc.)
+  - Supports app-defined roles (e.g. MESSAGE_BOARD_POSTER, HELPER, etc.)
+
+File sharing
+  - Upload/download files into S3
+  - Share settings (all villagers, specific villagers, private)
+
+
+
+-----  
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
