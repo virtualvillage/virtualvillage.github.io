@@ -48,9 +48,41 @@ A virtual village is similar to a social network. Your app can define a fixed vi
 - Upload/download files into S3
 - Share settings (all villagers, specific villagers, private)
 
+### User Notifications
+- Mobile Push notifications
+- Email Notifications
+- Web socket notifications
+
+# Design Philosophy
+
+We like a micro-services library approach to building applications. The idea is that
+you can use our micro-services as-is for basic social-awareness features, but the
+bulk of your app will be built and run independently with the technology you prefer.
+This is unlike "platform" or "framework" types of design. We presume you want social-awareness
+and our related features available as services, as opposed to foisting our technology or
+code base upon you.
+
+Virtual Village is not meant to be a comprehensive platform for your app, but rather
+it creates an extensible set of micro-services that your app can leverage for it's backend.
+In this way, it's more of a starter kit of micro-services to implement commonly used (boilerplate)
+core services so you can focus your time and energy on the secret sauce that makes your app unique.
+
+Although our implementation uses a Go-based technology stack, you can add on to the
+backend with micro-services of your own design using the technology stack you prefer,
+for example with Node.js or Lambda functions.  
+
+There are a few "extension points" which may require you to work with our Go technology stack,
+but the majority of your app should work using Virtual Village as just a suite of stand-alone
+services.
+
+We allow you to have access to source to modify it to your liking. Once we get enough
+users to warrant it we may one day consider offering these services hosted for you to make
+it even easier. 
 
 
------  
+# Architecture Principles
+ Go, Postgres, etc.
+
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
