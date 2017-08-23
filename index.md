@@ -4,8 +4,25 @@ layout: default
 
 # What it's for
 
-Virtual village is for creating new applications which can leverage a "virtual village"
-for socially-aware applications.
+Virtual village is open sourced micro-services for creating new
+socially-aware applications. Socially-aware apps to create communities (i.e. virtual villages)
+which allow users to connect and share with each other.
+
+You can use virtual villages to control who you share with. Add people to a village, then share with that circle so village members (aka villagers) can see it. Virtual villages includes some basic
+features useful to most any socially-aware application
+out of the box such as villager communications, message boards, files, notifications, etc. But the real value of a village comes with the shared features or information unique to your app.
+
+Villages can be statically defined by your application, or your application can let its users
+create private villages for their own use. You could configure a village to be "public" so any of your app users can participate in a village, or you can configure villages so they are visible to invitation-only members.   
+
+When you "invite" someone to join a village, they might get a notification letting them know you added them to one of your villages. They can see anything you share with that village (if you enabled permissions to do so), including information you shared with that village including that before you added them. Managing invitations and village memberships are just some of the adminstrative features
+included by the services.
+
+You can see villagers you have in your village via the village directory features, including their profile information they have permitted people to see.
+
+The people and content you add are normally publicly visible by default to all villagers, but you can change who can see or modify information depending on your settings.
+
+
 
 # Concepts
 
@@ -53,6 +70,9 @@ A virtual village is similar to a social network. Your app can define a fixed vi
 - Email Notifications
 - Web socket notifications
 
+### Streams
+- events, blah
+
 # Design Philosophy
 
 We like a micro-services library approach to building applications. The idea is that
@@ -77,11 +97,16 @@ services.
 
 We allow you to have access to source to modify it to your liking. Once we get enough
 users to warrant it we may one day consider offering these services hosted for you to make
-it even easier. 
+it even easier.
 
 
 # Architecture Principles
  Go, Postgres, etc.
+
+* * *
+
+https://developers.google.com/+/domains/circles/
+
 
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
