@@ -103,6 +103,8 @@ it even easier.
 # Architecture Principles
  Go, Postgres, etc.
 
+ ![](https://github.com/virtualvillage/virtualvillage.github.io/blob/master/archiecture.png)
+
 * * *
 
 https://developers.google.com/+/domains/circles/
