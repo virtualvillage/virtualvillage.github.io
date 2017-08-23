@@ -2,6 +2,17 @@
 layout: default
 ---
 
+# What it's for
+
+Virtual village is for creating new applications which can leverage a "virtual village"
+for socially-aware applications.
+
+# Concepts
+
+A virtual village is similar to a social network. Your app can define a fixed village for all its users, or your app allow your users to create their own private villages. For example, an app can create a fixed village for all its users such as a "San Diego Musicians" application. An app can allow its users to create their own villages and invite only their friends to it, such as say an app that is for just your neighborhood or apartment building.  
+ 
+
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](another-page).
