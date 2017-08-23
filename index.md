@@ -103,7 +103,7 @@ it even easier.
 # Architecture Principles
  Go, Postgres, etc.
 
- ![](https://guides.github.com/activities/hello-world/branching.png)
+ ![](https://raw.githubusercontent.com/virtualvillage/virtualvillage.github.io/master/architecture.png)
 
  ![](https://github.com/virtualvillage/virtualvillage.github.io/blob/master/archiecture.png)
 
