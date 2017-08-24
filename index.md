@@ -2,11 +2,15 @@
 layout: default
 ---
 
-# What it's for
+# Virtual Village services
 
-Virtual village is open sourced micro-services for creating new
-socially-aware applications. Socially-aware apps to create communities (i.e. virtual villages)
-which allow users to connect and share with each other.
+Virtual Village is open source micro-services for creating new
+socially-aware applications. Socially-aware apps to create online communities (i.e. virtual villages) which allow users to connect and share with each other.
+
+Virtual village provides basic services to help you spend less time on basic features
+common to many socially-aware apps so you can spend more time on the features that make your app unique. We provide backend core services which can be hosted in the cloud (AWS initially and later Google) that are extensible so you can tweak them.
+
+# What it's for
 
 You can use virtual villages to control who you share with. Add people to a village, then share with that circle so village members (aka villagers) can see it. Virtual villages includes some basic
 features useful to most any socially-aware application
@@ -105,7 +109,12 @@ it even easier.
 
  ![](https://raw.githubusercontent.com/virtualvillage/virtualvillage.github.io/master/architecture.png)
 
- ![](https://github.com/virtualvillage/virtualvillage.github.io/blob/master/archiecture.png)
+
+# Frequently Asked Questions
+
+- Do you provide front-end components too?
+  - We provide backend REST services and some optional client-side API's for using them (Swift, ES6 and Java). In the future, we may eventually provide some optional UI components. 
+
 
 * * *
 
