@@ -2,13 +2,14 @@
 layout: default
 ---
 
-# Virtual Village services
+# Virtual Village
 
 Virtual Village is open source micro-services for creating new
 socially-aware applications. Socially-aware apps to create online communities (i.e. virtual villages) which allow users to connect and share with each other.
 
-Virtual village provides basic services to help you spend less time on basic features
-common to many socially-aware apps so you can spend more time on the features that make your app unique. We provide backend core services which can be hosted in the cloud (AWS initially and later Google) that are extensible so you can tweak them.
+Virtual village provides some basic social-awareness features
+common to many socially-aware apps off the shelf for you to use,
+so you can spend more time building the features that make your app unique. We provide backend core services which can be hosted in the cloud (AWS initially and later Google) that are extensible so you can tweak them to your liking.
 
 # What it's for
 
@@ -32,59 +33,96 @@ The people and content you add are normally publicly visible by default to all v
 
 A virtual village is similar to a social network. Your app can define a fixed village for all its users, or your app allow your users to create their own private villages. For example, an app can create a fixed village for all its users such as a "San Diego Musicians" application. An app could also allow its users to create their own private villages and invite only their friends to it, such as say an app that is for sharing information with just your neighborhood or apartment building.  
 
-# Platform Features
+# Virtual Village Features
 * * *
+
+### General
+- Requires use of Village, Memberships and User services, the rest is optional
+- REST Services
+- Web socket API for real-time updates
+- Mobile PUSH notification integration
+- Optional client SDK's (Swift, Javascript, Java)
+  - Realm database integration for mobile SDK
+- JWT tokens between client-server communications
+
 ### Villages
-- create fixed village(s) for all app users
-- ability for users to create their own villages
+- Create fixed village(s) for all app users
+- Allow your users to create and manage their own private villages
+
+- Village visibility options
+  - public - anyone can view the village and contents
+  - private - only village members can view village and contents
+
+### Village memberships (aka villagers)
+- Can manually add / remove users from village
+- Village-level permission roles (admin, user, etc.)
+  - Supports app-defined roles (e.g. MESSAGE_BOARD_POSTER, HELPER, etc.)
+
 
 ### Village invitations
-- users create and manage invitations to their villages
-  - email
-  - manually add / remove users
-- email sending of village invitations for new users
-- invitation response handling and management
+- Create and manage invitations to join villages
+  - Email delivery of village invitations to non-users
+- Email delivery of village invitations for new users
+  - Email content configurable by app
+- Invitation response handling and management
 
-### Users
-- user management for your app
-- user profiles (photo/avatar, name, contact info, etc.)
-- user-selectable profile sharing options
+
+### User management
+- Sign up
+- Sign on / Log out
+- User profiles and preferences (photo/avatar, name, contact info, etc.)
+  - Villager-tunable profile sharing options
+  - Option to add I.C.E. (In Case of Emergency) info to a profile
+- Profile and preference data can be extended by app
+- Future: Auth0 and other auth integration options
 
 ### Village Directory
-- list all villagers and their profiles
-- options for shared profile in
+- list and manage all villagers and their profiles
+  - options for sharing profile info with village
+- Ability to add non-users to a directory (e.g. a doctor or a school)
 
-### Villager Communications    
-- one-to-one villager messaging
-- broadcast messages for all villagers
-- message boards w/ threaded discussion
-  - fixed topics
-  - user-defined topics
+### Village calendar
+- View and manage calendar events
 
-### Village memberships
-- Village-level permissions roles (admin, user, etc.)
-- Supports app-defined roles (e.g. MESSAGE_BOARD_POSTER, HELPER, etc.)
+### Village Communications    
+- Villager-to-villager messaging
+- Broadcast messages for all villagers
+- Topic message boards w/ threaded discussion
+  - App-defined fixed topics
+  - Support for villager-defined topics
 
-### File sharing
-- Upload/download files into S3
-- Share settings (all villagers, specific villagers, private)
+### Configuration
+- Ability to modify hosts, database configurations, etc. easily in "10 factor" manner.
+- Metadata for extensibility stored in PostgreSQL for metadata-driven capabilities
 
-### User Notifications
-- Mobile Push notifications
-- Email Notifications
-- Web socket notifications
+### Village file sharing
+- Upload/download files into S3 for sharing
+  - File sharing village permissions for file show/hide, read/write, etc.
 
-### Streams
-- events, blah
+
+### Village Streams
+- Service data updates get published to message stream so your app can react to changes
+  - Configure events for PUSH notifications and web services API
+
+
+### Add-on Village Services
+- Ecosystem of Optional and 3rd party services made by others
+  - e.g. Village Neighborhood watch service
+  - e.g. Village photo book service
+  - e.g. Village yelp-like review service
+  - e.g. Village service provider directory (e.g. local taxis, house cleaning, etc.)
+  - e.g. Village ride-sharing / car pool service
+  - e.g. Village group purchasing service (e.g. Costco bulk buy and split-up)
+
 
 # Design Philosophy
 
 We like a micro-services library approach to building applications. The idea is that
 you can use our micro-services as-is for basic social-awareness features, but the
-bulk of your app will be built and run independently with the technology you prefer.
-This is unlike "platform" or "framework" types of design. We presume you want social-awareness
-and our related features available as services, as opposed to foisting our technology or
-code base upon you.
+bulk of your app will be built and run independently using the technologies you prefer
+for maximum flexibility.
+This is unlike "platform" or "framework" types of approaches. We presume you want social-awareness
+and our related features available as separate services, as opposed to foisting our technology stack and code base upon you.
 
 Virtual Village is not meant to be a comprehensive platform for your app, but rather
 it creates an extensible set of micro-services that your app can leverage for it's backend.
@@ -93,153 +131,82 @@ core services so you can focus your time and energy on the secret sauce that mak
 
 Although our implementation uses a Go-based technology stack, you can add on to the
 backend with micro-services of your own design using the technology stack you prefer,
-for example with Node.js or Lambda functions.  
+for example with Node.js or Lambda functions.   
 
-There are a few "extension points" which may require you to work with our Go technology stack,
-but the majority of your app should work using Virtual Village as just a suite of stand-alone
-services.
+There are a few "extension points" which you may want you to work with our Go technology stack,
+but these should be the exceptional case, not the norm. The majority of apps should work using Virtual Village as just a suite of stand-alone services.
 
-We allow you to have access to source to modify it to your liking. Once we get enough
-users to warrant it we may one day consider offering these services hosted for you to make
-it even easier.
+We allow you to have access to source code so you can modify it to your liking if need be. If we get enough users that request it, we may one day consider offering these services hosted in the cloud for you to make it even easier to use them.
 
 
-# Architecture Principles
- Go, Postgres, etc.
+# Architecture
 
  ![](https://raw.githubusercontent.com/virtualvillage/virtualvillage.github.io/master/architecture.png)
+
+## Cloud-friendly
+
+The architecture is designed so services are straightforward to host in public or private clouds. The initial version will target AWS, but we hope to support Google cloud available shortly after.
+The main cloud-specific components are services that have a reliance on cloud services (e.g. S3, Kinesis). We may opt to refactor for serverless cloud platforms, but at this time they are still cloud-dependent and primarily javascript/node.js oriented.
+
+## Service implementation language
+
+The services are built using **Go** language. We include docker setup for them, but this is optional.
+We like Go's simplicity, performance and capabilities of its standard libraries. You won't need
+to work in Go unless you want to modify/view a service's source code.  
+
+## Docker
+
+The services are designed to be used with Docker, but this is optional. You can deploy with or
+without Docker.
+
+## Database
+
+We use **PostgreSQL** as our database, which you can host yourself or is available hosted in most cloud environments. The database schema is simple and all tables have an optional JSON field for
+adding your own app-specific data to them. We use stored procedures to optimize database performance and to make it easier to modify or extend database schemas without breaking your code. We put zero "business logic" in stored procedures, they may only include data integrity, validation or basic SQL Query and CRUD capability. We designed the schema to be as simple as possible so it's easy to understand, debug or extend if need be. We chose PostgreSQL for it's features, referential integrity / join capability, performance and its operational (e.g. backup/restore) capabilities. Your app's service can choose to use PostgreSQL or you can use other databases (e.g. A NoSQL database). There is no requirement that you use the Virtual Village database for your services.
+
+We'd like to say that you won't need to know anything about PostgreSQL, but that wouldn't be realistic. You should have some basic SQL and operational knowledge of the database.
+
+Our schema is composed of the following entities:
+
+| Table        | Description                                                     |
+|:-------------|:----------------------------------------------------------------|
+| Villages     | Definitions of the villages your app uses                       |
+| Users        | User and user/profile information, not specific to any village  |
+| Memberships  | Links Users to Villages, also includes membership attributes    |
+| Invitations  | Village Invitations to join a village sent to persons           |
+| Messages     | Villager to villager messages                                   |
+| Topics       | Village Topic / group message boards                            |
+| Calendar     | Village shareable calendar events                               |
+| Files        | Village shareable file references (physical file stored in S3)  |
+| Metadata     | Metadata JSON documents for extensibility and configuration     |
+
+Our database is designed for single-app-tenancy only. Each "app" you build should
+probably run on it's own database instance. A single app can define and use as many villages
+as you want, even villager-created ones. Note that a user can be a member to many villages,
+as this enables your users to create lots of private villages and other users can join them.
+Most of the entities and features are village-scoped, that is the features (e.g. invitations
+, village directory, message boards) are meant to apply to one and only one village.
+
+You can easily extend our PostgreSQL schema by adding more tables to build out your own features
+as you wish. This is probably the easiest way to add features, but by design you don't
+have to build your features using PostgreSQL.
+
+## Caching
+
+We use **Redis** for our caching infrastructure. We will later support AWS and Google cache services as well. We store only in-memory data in Redis, we do not rely on it's persistence features.
+
+## Eventing
+
+We initially support **AWS Kinesis** and **Kafka** integration. We hope to add Google messaging support soon.
 
 
 # Frequently Asked Questions
 
 - Do you provide front-end components too?
-  - We provide backend REST services and some optional client-side API's for using them (Swift, ES6 and Java). In the future, we may eventually provide some optional UI components. 
+  - We provide backend REST services and some optional client-side API's for using them (Swift, ES6 and Java). In the future, we may eventually provide some optional UI components.
 
-
-* * *
-
-https://developers.google.com/+/domains/circles/
-
-
-
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
-[Link to another page](another-page).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# [](#header-1)Header 1
-
-# headerme too
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## [](#header-2)Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### [](#header-3)Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### [](#header-4)Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### [](#header-5)Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### [](#header-6)Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
+- Do you have plans to offer Virtual Village as a hosted cloud service?
+  - If we have enough interest, we may consider it. Since this implies SLA's, hosting costs, etc.
+    it would be a kind of commercial product offering.
 
 * * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
