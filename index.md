@@ -7,8 +7,7 @@ layout: default
 Virtual Village is open source micro-services for creating new
 socially-aware applications. Socially-aware apps create online communities (i.e. virtual villages) which allow users to connect and share with each other.
 
-Virtual village provides some basic social-awareness features
-common to many socially-aware apps for you to use,
+Virtual village provides social-awareness features as a service,
 so you can spend more time building the features that make your app unique. We provide backend  services which can be easily hosted in the cloud (AWS initially and later Google) that are extensible so you can tweak them to your liking.
 
 # What it's for
