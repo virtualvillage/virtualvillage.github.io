@@ -33,7 +33,6 @@ A virtual village is similar to a social network. Your app can define a fixed vi
 * * *
 
 ### General
-- Requires use of Village, Memberships and User services, the rest is optional
 - REST Services
 - Web socket API for real-time updates
 - Mobile PUSH notification integration
