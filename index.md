@@ -10,27 +10,25 @@ socially-aware applications. Socially-aware apps create online communities (i.e.
 Virtual village provides social-awareness features as a service,
 so you can spend more time building the features that make your app unique. We provide backend  services which can be easily hosted in the cloud (AWS initially and later Google) that are extensible so you can tweak them to your liking.
 
-# What it's for
+# How it works
 
-You can use virtual villages to control who you share with. Add people to a village, then share with that circle so village members (aka villagers) can see it. Virtual villages includes some basic
-features useful to most any socially-aware application
-out of the box such as villager communications, message boards, files, notifications, etc. But the real value of a village comes with the shared features or information unique to your app.
+You can use virtual villages to control who you share with. Add people to a village, then share with village so its members (aka villagers) can see it.
 
-Villages can be statically defined by your application, or your application can let its users
-create private villages for their own use. You could configure a village to be "public" so any of your app users can participate in a village, or you can configure villages so they are visible to invitation-only members.   
+Villages can be statically defined by your application or your application can let its users
+create their own private villages for their own use. You could configure a village to be "public" so any of your app users can participate in a village, or you can configure villages so they are visible to invitation-only members.   
 
-When you "invite" someone to join a village, they might get a notification letting them know you added them to one of your villages. They can see anything you share with that village (if you enabled permissions to do so), including information you shared with that village including that before you added them. Managing invitations and village memberships are just some of the adminstrative features
-included by the services.
+When you "invite" someone to join a village, they get a notification letting them know you added them to one of your villages. Once they become a village member, they can see anything you share with that village (if you enabled permissions to do so), including all information you shared with that village before you added them. Managing invitations and village memberships are just some of the adminstrative features
+included.
 
 You can see villagers you have in your village via the village directory features, including their profile information they have permitted people to see.
 
-The people and content you add are normally publicly visible by default to all villagers, but you can change who can see or modify information depending on your settings.
+The people and content you add are normally visible by default to all villagers, but you can further restrict it depending on your settings.
 
 
 
 # Concepts
 
-A virtual village is similar to a social network. Your app can define a fixed village for all its users, or your app allow your users to create their own private villages. For example, an app can create a fixed village for all its users such as a "San Diego Musicians" application. An app could also allow its users to create their own private villages and invite only their friends to it, such as say an app that is for sharing information with just your neighborhood or apartment building.  
+A virtual village is similar to a social network. Your app can define a fixed village for all its users, or your app allow your users to create their own private villages. For example, an app can create a fixed village for all its users such as a "San Diego Musicians" application. An app could also allow its users to create their own private villages and invite their friends to join it, such as say an app that is for sharing information with just your neighborhood or apartment building.  
 
 # Virtual Village Features
 * * *
