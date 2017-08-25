@@ -12,17 +12,16 @@ so you can spend more time building the features that make your app unique. We p
 
 # How it works
 
-You can use virtual villages to control who you share with. Add people to a village, then share with village so its members (aka villagers) can see it.
 
 Villages can be statically defined by your application or your application can let its users
 create their own private villages for their own use. You could configure a village to be "public" so any of your app users can participate in a village, or you can configure villages so they are visible to invitation-only members.   
 
-When you "invite" someone to join a village, they get a notification letting them know you added them to one of your villages. Once they become a village member, they can see anything you share with that village (if you enabled permissions to do so), including all information you shared with that village before you added them. Managing invitations and village memberships are just some of the adminstrative features
+When you "invite" someone to join a village, they get a notification letting them know you want them to join your village. Once they become a village member, they can see anything you share with that village (if you enabled permissions to do so), including all information you shared with that village before you added them. Managing invitations and village memberships are just some of the administrative features
 included.
 
-You can see villagers you have in your village via the village directory features, including their profile information they have permitted people to see.
+You can see the villagers in your village via the village directory feature, including their profile information they have permitted people to see.
 
-The people and content you add are normally visible by default to all villagers, but you can further restrict it depending on your settings.
+The people and data you add to the village are normally visible by all villagers by default, but you can further restrict it depending on your settings.
 
 
 
