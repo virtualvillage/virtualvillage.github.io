@@ -24,4 +24,4 @@ Our domain model is composed of the following entities:
 | Files        | Village shareable file references (physical file stored in S3)  |
 | Metadata     | Metadata JSON documents for extensibility and configuration     |
 
-Return to [Home](../index.md).
+Return to [Home](..)
