@@ -7,7 +7,7 @@ adding your own app-specific data to them. We use stored procedures to optimize 
 Our database is currently designed for single-app-tenancy only.
 Each "app" you build should
  run on a separate database instance.
- 
+
 We'd like to say that you won't need to know anything about PostgreSQL, but that wouldn't be realistic. You should have some basic SQL and operational knowledge of the database.
 
 Our domain model is composed of the following entities:
@@ -23,3 +23,5 @@ Our domain model is composed of the following entities:
 | Calendar     | Village shareable calendar events                               |
 | Files        | Village shareable file references (physical file stored in S3)  |
 | Metadata     | Metadata JSON documents for extensibility and configuration     |
+
+Return to [Home](../index.md).
