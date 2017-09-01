@@ -237,6 +237,8 @@ but these should be the exceptional case, not the norm. The majority of apps sho
 
 We allow you to have access to source code so you can modify it to your liking if need be. If we get enough users that request it, we may one day consider offering these services hosted in the cloud for you to make it even easier to use them.
 
+## Design information
+[Design Docs](design.md)
 
 # Architecture
 
