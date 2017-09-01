@@ -221,6 +221,8 @@ for maximum flexibility.
 This is unlike "platform" or "framework" types of approaches. We presume you want social-awareness
 and our related features available as separate services, as opposed to foisting our technology stack and code base upon you.
 
+![](https://raw.githubusercontent.com/virtualvillage/virtualvillage.github.io/master/services.png)
+
 Virtual Village is not meant to be a comprehensive platform for your app, but rather
 it creates an extensible set of micro-services that your app can leverage for it's backend.
 In this way, it's more of a starter kit of micro-services to implement commonly used (boilerplate)
