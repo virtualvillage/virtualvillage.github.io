@@ -242,7 +242,7 @@ We allow you to have access to source code so you can modify it to your liking i
 
 # Architecture
 
- ![Architecture](https://raw.githubusercontent.com/virtualvillage/virtualvillage.github.io/master/architecture.png)
+ [Architecture](https://raw.githubusercontent.com/virtualvillage/virtualvillage.github.io/master/architecture.png)
 
 ## Cloud-friendly
 
